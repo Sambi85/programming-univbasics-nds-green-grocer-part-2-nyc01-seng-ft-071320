@@ -49,5 +49,5 @@ total += new_cart[i][:price] * new_cart[i][:count]
 if total >= 100
 total = total - total * 0.1
 end
-total
+pp total
 end
