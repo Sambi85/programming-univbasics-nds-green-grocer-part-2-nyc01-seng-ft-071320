@@ -46,7 +46,7 @@ while i < new_cart.length
 total += new_cart[i][:price] * new_cart[i][:count]
     i+=1 
   end
-if subtotal >= 100
+if total >= 100
 total = total - total * 0.1
 end
 total
