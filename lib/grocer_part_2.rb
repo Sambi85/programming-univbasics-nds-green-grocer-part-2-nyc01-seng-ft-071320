@@ -42,12 +42,17 @@ total = 0.0
 new_cart = apply_clearance(apply_coupons(consolidate_cart(cart),coupons))
 
 i=0
+
 while i < new_cart.length
 total += new_cart[i][:price] * new_cart[i][:count]
-    i+=1 
-  end
+i+=1 
+end
+
+pp new_cart
+
 if total >= 100
 total = total - total * 0.1
 end
-pp total
+
+total
 end
