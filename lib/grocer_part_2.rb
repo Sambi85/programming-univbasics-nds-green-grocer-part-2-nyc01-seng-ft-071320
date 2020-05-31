@@ -9,7 +9,7 @@ while j < cart.length do
 
 if coupons[i][:item] == cart[j][:item]
 
-  if coupons[i][:num] <= cart[j][:item]
+  if coupons[i][:num] <= cart[j][:count]
 
 cart[j][:count] -= coupons[i][:num]
 
