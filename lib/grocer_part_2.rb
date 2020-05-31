@@ -46,5 +46,4 @@ while i < new_cart.length
 puts new_cart[i]
     i+=1 
   end
-pp subtotal  
 end
