@@ -40,11 +40,11 @@ end
 def checkout(cart, coupons)
 subtotal = 0.0
 new_cart = apply_clearance(apply_coupons(consolidate_cart(cart),coupons))
-pp new_cart
+
 i=0
 while i < new_cart.length
 subtotal += new_cart[i][:price]
     i+=1 
   end
- subtotal  
+pp subtotal  
 end
