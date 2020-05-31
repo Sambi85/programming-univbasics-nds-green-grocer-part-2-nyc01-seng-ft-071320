@@ -43,7 +43,8 @@ new_cart = apply_clearance(apply_coupons(consolidate_cart(cart),coupons))
 
 i=0
 while i < new_cart.length
-puts new_cart[i]
+subtotal << new_cart[i][:price] * new_cart[i][:count]
     i+=1 
   end
+subtotal
 end
