@@ -1,18 +1,25 @@
 require_relative './part_1_solution.rb'
 def apply_coupons(cart, coupons)
+
 i = 0
 while i < coupons.length do
+
 j = 0
 while j < cart.length do 
 
 if coupons[i][:item] == cart[j][:item]
+
+  if coupons[i][:num] <= cart[j][:item]
+
 cart[j][:count] -= coupons[i][:num]
+
 cart << {
   :item => "#{cart[j][:item]} W/COUPON",
   :price => coupons[i][:cost].to_f / coupons[i][:num].to_f,
   :clearance => cart[j][:clearance],
   :count => coupons[i][:num]
   }
+  end
 end
           j += 1
         end  
